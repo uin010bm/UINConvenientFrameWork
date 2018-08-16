@@ -1,0 +1,6 @@
+framework module UINConvenientFrameWork {
+  umbrella header "UINConvenientFrameWork-umbrella.h"
+
+  export *
+  module * { export * }
+}

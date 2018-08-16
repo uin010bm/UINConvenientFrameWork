@@ -1,0 +1,22 @@
+{
+  "name": "UINConvenientFrameWork",
+  "version": "0.1.0",
+  "summary": "A short description of UINConvenientFrameWork.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/tanaka_yu/UINConvenientFrameWork",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "tanaka_yu": "tanaka_yu@cyberagent.co.jp"
+  },
+  "source": {
+    "git": "https://github.com/tanaka_yu/UINConvenientFrameWork.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "UINConvenientFrameWork/Classes/**/*"
+}

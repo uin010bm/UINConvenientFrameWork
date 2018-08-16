@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oid-rb-DeQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Float View Controller-->
+        <scene sceneID="d78-7Q-xgX">
+            <objects>
+                <viewController id="Oid-rb-DeQ" customClass="UINFloatViewController" customModule="ConvenientSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hsx-ZH-xni">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Try drag and replace position." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JVO-JZ-HD4">
+                                <rect key="frame" x="10" y="50" width="355" height="124"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="upv-vx-NUM" firstAttribute="bottom" secondItem="JVO-JZ-HD4" secondAttribute="bottom" constant="493" id="CQv-LN-JF2"/>
+                            <constraint firstItem="JVO-JZ-HD4" firstAttribute="leading" secondItem="upv-vx-NUM" secondAttribute="leading" constant="10" id="Ssd-jD-6pg"/>
+                            <constraint firstItem="JVO-JZ-HD4" firstAttribute="top" secondItem="upv-vx-NUM" secondAttribute="top" constant="30" id="f3Y-e0-71P"/>
+                            <constraint firstItem="upv-vx-NUM" firstAttribute="trailing" secondItem="JVO-JZ-HD4" secondAttribute="trailing" constant="10" id="uhD-pL-ZLK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="upv-vx-NUM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z7m-Ph-eBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="185"/>
+        </scene>
+    </scenes>
+</document>

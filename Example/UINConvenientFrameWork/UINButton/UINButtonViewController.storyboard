@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PAF-GV-VK7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Button View Controller-->
+        <scene sceneID="sbX-Al-wHu">
+            <objects>
+                <viewController id="PAF-GV-VK7" customClass="UINButtonViewController" customModule="ConvenientSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fia-G2-4B1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF8-a6-LTi" customClass="UINButton" customModule="ConvenientSamples" customModuleProvider="target">
+                                <rect key="frame" x="172" y="40" width="30" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwZ-Ls-pkT" customClass="UINButton" customModule="ConvenientSamples" customModuleProvider="target">
+                                <rect key="frame" x="172" y="93" width="30" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPj-0x-KEq" customClass="UINButton" customModule="ConvenientSamples" customModuleProvider="target">
+                                <rect key="frame" x="172" y="146" width="30" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDJ-Vd-C6S" customClass="UINButton" customModule="ConvenientSamples" customModuleProvider="target">
+                                <rect key="frame" x="172" y="199" width="30" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xwZ-Ls-pkT" firstAttribute="top" secondItem="LF8-a6-LTi" secondAttribute="bottom" constant="20" id="03B-Sf-OUI"/>
+                            <constraint firstItem="xwZ-Ls-pkT" firstAttribute="centerX" secondItem="Fia-G2-4B1" secondAttribute="centerX" id="6fT-s2-fBZ"/>
+                            <constraint firstItem="IDJ-Vd-C6S" firstAttribute="centerX" secondItem="Fia-G2-4B1" secondAttribute="centerX" id="8yW-JD-f89"/>
+                            <constraint firstItem="CPj-0x-KEq" firstAttribute="centerX" secondItem="Fia-G2-4B1" secondAttribute="centerX" id="BBu-p1-cBh"/>
+                            <constraint firstItem="CPj-0x-KEq" firstAttribute="top" secondItem="xwZ-Ls-pkT" secondAttribute="bottom" constant="20" id="OYg-hD-xjs"/>
+                            <constraint firstItem="LF8-a6-LTi" firstAttribute="top" secondItem="QVN-va-FM6" secondAttribute="top" constant="20" id="XYs-CW-3xb"/>
+                            <constraint firstItem="IDJ-Vd-C6S" firstAttribute="top" secondItem="CPj-0x-KEq" secondAttribute="bottom" constant="20" id="cr1-25-Qt5"/>
+                            <constraint firstItem="LF8-a6-LTi" firstAttribute="centerX" secondItem="Fia-G2-4B1" secondAttribute="centerX" id="tME-gv-gbg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QVN-va-FM6"/>
+                    </view>
+                    <connections>
+                        <outlet property="uinButton_a" destination="LF8-a6-LTi" id="IU1-UI-fcI"/>
+                        <outlet property="uinButton_b" destination="xwZ-Ls-pkT" id="EKq-NS-CbX"/>
+                        <outlet property="uinButton_c" destination="CPj-0x-KEq" id="7ip-UM-LjB"/>
+                        <outlet property="uinButton_d" destination="IDJ-Vd-C6S" id="DXW-TZ-DlC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ucv-V7-InF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="127"/>
+        </scene>
+    </scenes>
+</document>

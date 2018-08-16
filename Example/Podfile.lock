@@ -1,0 +1,16 @@
+PODS:
+  - UINConvenientFrameWork (0.1.0)
+
+DEPENDENCIES:
+  - UINConvenientFrameWork (from `../`)
+
+EXTERNAL SOURCES:
+  UINConvenientFrameWork:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UINConvenientFrameWork: 6f4cb0a24bdcff463f75b9ed478506e804c76fdd
+
+PODFILE CHECKSUM: 0a8b53bc646a491662b72336f280718a3d10d068
+
+COCOAPODS: 1.5.3

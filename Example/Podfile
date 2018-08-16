@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+target 'UINConvenientFrameWork_Example' do
+  pod 'UINConvenientFrameWork', :path => '../'
+
+  target 'UINConvenientFrameWork_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
