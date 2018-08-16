@@ -22,23 +22,13 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLG-tM-DmT">
                         <rect key="frame" x="270" y="10" width="40" height="40"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZt-FS-IxR">
-                                <rect key="frame" x="-6" y="4" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="tappedSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="TH3-rU-9du"/>
-                                </connections>
-                            </switch>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="An3-nH-Mdg">
                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43A-1W-bud">
                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="An3-nH-Mdg" secondAttribute="bottom" id="3is-Q1-WkQ"/>
                             <constraint firstAttribute="trailing" secondItem="43A-1W-bud" secondAttribute="trailing" id="9zV-VW-oOD"/>
@@ -53,8 +43,8 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx2-bH-PEu">
-                        <rect key="frame" x="10" y="19" width="250" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="10" y="23" width="250" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -73,7 +63,6 @@
                 <outlet property="rightMargin" destination="rH2-EI-rf4" id="oPV-ID-A9E"/>
                 <outlet property="selectViewWidth" destination="V1a-Xr-ehV" id="WSi-BQ-wlr"/>
                 <outlet property="selectedView" destination="An3-nH-Mdg" id="WU8-s8-HZy"/>
-                <outlet property="switch" destination="UZt-FS-IxR" id="7MS-xg-zr2"/>
                 <outlet property="titleLabel" destination="Fx2-bH-PEu" id="fCn-LF-Jlk"/>
                 <outlet property="unSelectView" destination="43A-1W-bud" id="yjo-GC-UzJ"/>
             </connections>

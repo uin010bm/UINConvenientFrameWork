@@ -19,7 +19,11 @@ class UINButtonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
         uinButton_a
             .size()
             .fillColor(color: .blue)
@@ -27,7 +31,7 @@ class UINButtonViewController: UIViewController {
             .lineWidth(value: 4)
             .radius(value: 6)
             .iconFont(font: UIFont(name: "Genericons-Neue", size: 16)!)
-            .iconText(value: "")
+            .iconText(value: "")
             .iconColor(color: UIColor.white)
             .text(value: "Sample_a")
             .font(font: UIFont.boldSystemFont(ofSize: 16))
@@ -48,7 +52,7 @@ class UINButtonViewController: UIViewController {
             .lineWidth(value: 2)
             .radius(value: 30)
             .iconFont(font: UIFont(name: "Genericons-Neue", size: 24)!)
-            .iconText(value: "")
+            .iconText(value: "")
             .iconColor(color: UIColor.black)
             .iconImage(image: UIImage(named: "profile_alpha")!)
             .text(value: "HOGE")
@@ -68,7 +72,7 @@ class UINButtonViewController: UIViewController {
             .lineWidth(value: 1)
             .backgroundImage(image: UINGradationPresenter.generateGradationImage(size: CGSize(width: 300, height: 60), startFrom: .bottom, colors: [.gray, .lightGray, .darkGray], locations: [1, 0.8, 0]))
             .iconFont(font: UIFont(name: "Genericons-Neue", size: 24)!)
-            .iconText(value: "")
+            .iconText(value: "")
             .iconColor(color: .white)
             .text(value: "HOGEHOGE\nFUGAFUGAFUGAFUGA")
             .textAlign(value: .left)

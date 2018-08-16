@@ -13,24 +13,24 @@
         <!--Button View Controller-->
         <scene sceneID="sbX-Al-wHu">
             <objects>
-                <viewController id="PAF-GV-VK7" customClass="UINButtonViewController" customModule="ConvenientSamples" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PAF-GV-VK7" customClass="UINButtonViewController" customModule="UINConvenientFrameWork_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fia-G2-4B1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF8-a6-LTi" customClass="UINButton" customModule="ConvenientSamples" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF8-a6-LTi" customClass="UINButton" customModule="UINConvenientFrameWork">
                                 <rect key="frame" x="172" y="40" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwZ-Ls-pkT" customClass="UINButton" customModule="ConvenientSamples" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwZ-Ls-pkT" customClass="UINButton" customModule="UINConvenientFrameWork">
                                 <rect key="frame" x="172" y="93" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPj-0x-KEq" customClass="UINButton" customModule="ConvenientSamples" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPj-0x-KEq" customClass="UINButton" customModule="UINConvenientFrameWork">
                                 <rect key="frame" x="172" y="146" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDJ-Vd-C6S" customClass="UINButton" customModule="ConvenientSamples" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDJ-Vd-C6S" customClass="UINButton" customModule="UINConvenientFrameWork">
                                 <rect key="frame" x="172" y="199" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             </button>

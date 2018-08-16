@@ -10,15 +10,13 @@
 import UIKit
 
 public class UINSelectionTableViewCell: UITableViewCell, SelectableDispatcherProtocol {
+    
+    private let emptyButtonRectSize: CGFloat = 16
+    private let onButtonRectSize: CGFloat = 10
 
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
             titleLabel.numberOfLines = 0
-        }
-    }
-    @IBOutlet weak var `switch`: UISwitch! {
-        didSet {
-            `switch`.isHidden = true
         }
     }
     @IBOutlet weak var selectedView: UIView! {
@@ -55,13 +53,11 @@ public class UINSelectionTableViewCell: UITableViewCell, SelectableDispatcherPro
         // Configure the view for the selected state
     }
 
-    public func setup(title: NSAttributedString, customSelectionView: (UIView, UIView)? = nil, margin: CGFloat? = nil, selectionViewsRectValue: CGFloat? = nil, selected: Bool, dispatcher: SelectableDispatcher? = nil) {
+    public func setup(title: NSAttributedString, customSelectionView: (selected: UIView, unselect: UIView)? = nil, margin: CGFloat? = nil, selectionViewsRectValue: CGFloat? = nil, selected: Bool, dispatcher: SelectableDispatcher? = nil) {
         
         setup(dispatcher: dispatcher, margin: margin, selectionViewsRectValue: selectionViewsRectValue)
 
         titleLabel.attributedText = title
-        
-        `switch`.isHidden = !(customSelectionView == nil)
         
         self.selectedView.subviews.forEach { $0.removeFromSuperview() }
         self.unSelectView.subviews.forEach { $0.removeFromSuperview() }
@@ -69,6 +65,30 @@ public class UINSelectionTableViewCell: UITableViewCell, SelectableDispatcherPro
         if let customSelectionView = customSelectionView {
             self.selectedView.addSubview(customSelectionView.0)
             self.unSelectView.addSubview(customSelectionView.1)
+        } else {
+            let empty = UIView(frame: CGRect(x: (selectedView.frame.width - emptyButtonRectSize) / 2, y: (selectedView.frame.height - emptyButtonRectSize) / 2, width: emptyButtonRectSize, height: emptyButtonRectSize))
+            empty.backgroundColor = .clear
+            empty.layer.borderWidth = 1
+            empty.layer.borderColor = UIColor.lightGray.cgColor
+            empty.layer.cornerRadius = empty.frame.height / 2
+            empty.layer.masksToBounds = true
+            self.unSelectView.addSubview(empty)
+            
+            let scaled = CGRect(x: (selectedView.frame.width - onButtonRectSize) / 2, y: (selectedView.frame.height - onButtonRectSize) / 2, width: onButtonRectSize, height: onButtonRectSize)
+            let on = UIView(frame: scaled)
+            on.backgroundColor = .clear
+            on.backgroundColor = .green
+            on.layer.cornerRadius = on.frame.height / 2
+            on.layer.masksToBounds = true
+            
+            let empty_sec = UIView(frame: CGRect(x: (selectedView.frame.width - emptyButtonRectSize) / 2, y: (selectedView.frame.height - emptyButtonRectSize) / 2, width: emptyButtonRectSize, height: emptyButtonRectSize))
+            empty_sec.backgroundColor = .clear
+            empty_sec.layer.borderWidth = 1
+            empty_sec.layer.borderColor = UIColor.lightGray.cgColor
+            empty_sec.layer.cornerRadius = empty_sec.frame.height / 2
+            empty_sec.layer.masksToBounds = true
+            self.selectedView.addSubview(empty_sec)
+            self.selectedView.addSubview(on)
         }
 
         update(selected)
@@ -90,29 +110,17 @@ public class UINSelectionTableViewCell: UITableViewCell, SelectableDispatcherPro
         }
     }
     
-    @IBAction func tappedSwitch(_ sender: UISwitch) {
-        checked = sender.isOn
-    }
-    
     public func tapped() {
         checked = !checked
         
-        if selectedView.subviews.count > 0 {
-            selectedView.isHidden = !checked
-            unSelectView.isHidden = checked
-        } else {
-            `switch`.isOn = checked
-        }
+        selectedView.isHidden = !checked
+        unSelectView.isHidden = checked
     }
     
     public func update(_ selected: Bool) {
         checked = selected
         
-        if selectedView.subviews.count > 0 {
-            selectedView.isHidden = !checked
-            unSelectView.isHidden = checked
-        } else {
-            `switch`.isOn = checked
-        }
+        selectedView.isHidden = !checked
+        unSelectView.isHidden = checked
     }
 }

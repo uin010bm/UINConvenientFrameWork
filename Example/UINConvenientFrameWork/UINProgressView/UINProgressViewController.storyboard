@@ -13,12 +13,12 @@
         <!--Progress View Controller-->
         <scene sceneID="k8u-2m-oOk">
             <objects>
-                <viewController id="0v6-lY-GZG" customClass="UINProgressViewController" customModule="ConvenientSamples" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0v6-lY-GZG" customClass="UINProgressViewController" customModule="UINConvenientFrameWork_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TOV-hB-cTD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLX-dB-z3I" customClass="UINProgressView" customModule="ConvenientSamples" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLX-dB-z3I" customClass="UINProgressView" customModule="UINConvenientFrameWork">
                                 <rect key="frame" x="37" y="40" width="300" height="6"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="height" constant="6" id="bZy-t1-77K"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHV-ee-ElF" customClass="UINProgressView" customModule="ConvenientSamples" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHV-ee-ElF" customClass="UINProgressView" customModule="UINConvenientFrameWork">
                                 <rect key="frame" x="37" y="106" width="300" height="10"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="width" constant="300" id="pBN-jB-U1M"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iF4-X6-y3z" customClass="UINProgressView" customModule="ConvenientSamples" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iF4-X6-y3z" customClass="UINProgressView" customModule="UINConvenientFrameWork">
                                 <rect key="frame" x="184" y="176" width="6" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>

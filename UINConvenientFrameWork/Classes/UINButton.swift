@@ -296,6 +296,18 @@ public class UINButton: UIButton {
         return self
     }
     
+    @discardableResult public func isEnabled(_ bool: Bool, animated: Bool = false) -> UINButton {
+        isUserInteractionEnabled = bool
+        if animated {
+            UIView.animate(withDuration: 0.2, animations: { [weak self] in
+                self?.content.alpha = bool ? 1 : 0.4
+            })
+        } else {
+            content.alpha = bool ? 1 : 0.4
+        }
+        return self
+    }
+    
     /// draw button view
     /// isVerticality -> icon and text row alignment
     public func draw(verticality: Bool = false, iconHorizontal: Bool = true) -> UINButton {
