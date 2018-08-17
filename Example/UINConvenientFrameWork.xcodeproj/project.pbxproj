@@ -136,7 +136,7 @@
 				6DE34A362125330D00DF422D /* UINProgressView */,
 				6DE34A31212532F400DF422D /* UINMultipleSelectionView */,
 				6DE34A2C212532D600DF422D /* UINGradation */,
-				6DE34A27212532B800DF422D /* UINFloatView */,
+				6DE34A27212532B800DF422D /* UINFloatViewManager */,
 				6DE34A222125328A00DF422D /* UINButton */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -201,13 +201,13 @@
 			path = UINButton;
 			sourceTree = "<group>";
 		};
-		6DE34A27212532B800DF422D /* UINFloatView */ = {
+		6DE34A27212532B800DF422D /* UINFloatViewManager */ = {
 			isa = PBXGroup;
 			children = (
 				6DE34A45212534E700DF422D /* UINFloatViewController.storyboard */,
 				6DE34A44212534E700DF422D /* UINFloatViewController.swift */,
 			);
-			path = UINFloatView;
+			path = UINFloatViewManager;
 			sourceTree = "<group>";
 		};
 		6DE34A2C212532D600DF422D /* UINGradation */ = {

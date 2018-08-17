@@ -9,12 +9,19 @@
 import UIKit
 import CoreGraphics
 
+/// Gradation view presenter
 public class UINGradationPresenter {
+    
+    
+    // MARK: - enum
     
     /// starting point
     public enum GradationStart {
         case top, bottom, right, left, topLeft, topRight, bottomLeft, bottomRight
     }
+    
+    
+    // MARK: - class func
     
     /// generate gradation color image
     /// - parameter size:           image size
@@ -69,7 +76,14 @@ public class UINGradationPresenter {
         return image!
     }
     
-    /// generate with enum type
+    /// generate gradation color image
+    ///
+    /// - Parameters:
+    ///   - size: image size
+    ///   - startFrom: start point enum type
+    ///   - colors: gradation colors
+    ///   - locations: color variation points
+    /// - Returns: UIImage instance
     public static func generateGradationImage(size: CGSize, startFrom: GradationStart, colors: [UIColor], locations: [CGFloat]? = nil) -> UIImage {
         var startPoint: CGPoint
         var endPoint: CGPoint

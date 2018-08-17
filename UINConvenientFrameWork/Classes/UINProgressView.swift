@@ -12,12 +12,14 @@ import CoreGraphics
 // progress gauge view
 public class UINProgressView: UIView, CAAnimationDelegate {
     
+    
     // MARK: - enum
     
     //  progress gauge direction
     public enum Direction {
         case left, right, top, bottom
     }
+    
     
     // MARK: - struct
     
@@ -53,11 +55,11 @@ public class UINProgressView: UIView, CAAnimationDelegate {
     // MARK: - Properties
     
     /// Views
-    /// gradation view
-    private var gradationView: UIView?
-    /// mask
-    private var layerMask: CALayer?
     
+    // gradation view
+    private var gradationView: UIView?
+    // mask
+    private var layerMask: CALayer?
     
     /// Params
     
@@ -85,6 +87,7 @@ public class UINProgressView: UIView, CAAnimationDelegate {
     
     private var animationQueue: [(Float, Float)] = []
 
+    
     // MARK: - Functions
 
     public func fillColor(color: UIColor, overlayEnabled: Bool = false) -> UINProgressView {
@@ -125,7 +128,9 @@ public class UINProgressView: UIView, CAAnimationDelegate {
     
     
     /// draw gradation view and mask layer
-    public func draw() -> UINProgressView {
+    ///
+    /// - Returns: UINProgressView
+    @discardableResult public func draw() -> UINProgressView {
         
         alpha = 0
 
@@ -183,7 +188,13 @@ public class UINProgressView: UIView, CAAnimationDelegate {
         return self
     }
     
+
     /// animation flow
+    ///
+    /// - Parameters:
+    ///   - max: set maximum value
+    ///   - current: set current value
+    /// - Returns: UINProgressView
     @discardableResult public func animation(max: Float, current: Float) -> UINProgressView {
         guard let targetView = gradationView, let layerMask = layerMask else { return self }
         
@@ -236,9 +247,9 @@ public class UINProgressView: UIView, CAAnimationDelegate {
 
 extension UIImage {
     
-    /// ViewをベースにUIImageを取得する
-    /// - parameter view:   ベースとなるviewを指定
-    /// - parameter opaque: alphaを含めるか指定
+    /// get UIImage based on View
+    /// - parameter view: base view
+    /// - parameter opaque: Include alpha or specify
     /// - returns: UIIamge instance
     public class func getImageFromView(view: UIView, opaque: Bool? = nil) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, opaque ?? view.isOpaque, 0)
