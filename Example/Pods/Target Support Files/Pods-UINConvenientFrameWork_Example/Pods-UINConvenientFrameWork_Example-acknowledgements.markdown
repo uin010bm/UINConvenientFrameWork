@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## UINConvenientFrameWork
 
-Copyright (c) 2018 tanaka_yu <tanaka_yu@cyberagent.co.jp>
+Copyright (c) 2018 tanaka_yu <uin010bm@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/tanaka_yu/UINConvenientFrameWork'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'tanaka_yu' => 'tanaka_yu@cyberagent.co.jp' }
+  s.author           = { 'tanaka_yu' => 'uin010bm@gmail.com' }
   s.source           = { :git => 'https://github.com/tanaka_yu/UINConvenientFrameWork.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

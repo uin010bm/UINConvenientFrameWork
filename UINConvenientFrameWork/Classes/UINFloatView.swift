@@ -1,9 +1,9 @@
 // 
 //  UINFloatView.swift
-//  ConvenientSamples
+//  UINConvenientFrameWork
 //
 //  Created by yu tanaka on 2018/08/07.
-//  Copyright (c) 2018年 CyberAgent, Inc. All rights reserved.
+//  Copyright (c) 2018年 RC-Code, Inc. All rights reserved.
 //
 
 import UIKit

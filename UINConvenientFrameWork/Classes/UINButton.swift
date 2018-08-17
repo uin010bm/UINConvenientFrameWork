@@ -1,6 +1,6 @@
 // 
 //  UINButton.swift
-//  ConvenientSamples
+//  UINConvenientFrameWork
 //
 //  Created by yu tanaka on 2018/07/31.
 //  Copyright (c) 2018年 RC-Code, Inc. All rights reserved.

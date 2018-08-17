@@ -22,7 +22,7 @@ pod 'UINConvenientFrameWork'
 
 ## Author
 
-tanaka_yu, tanaka_yu@cyberagent.co.jp
+tanaka_yu, uin010bm@gmail.com
 
 ## License
 
