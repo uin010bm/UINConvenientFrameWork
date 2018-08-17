@@ -132,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				6D01EE57212543CC00EF086C /* Resources */,
-				6DE34A3B2125331F00DF422D /* UINShadow */,
+				6DE34A3B2125331F00DF422D /* UINShadowPresenter */,
 				6DE34A362125330D00DF422D /* UINProgressView */,
 				6DE34A31212532F400DF422D /* UINMultipleSelectionView */,
 				6DE34A2C212532D600DF422D /* UINGradation */,
@@ -237,13 +237,13 @@
 			path = UINProgressView;
 			sourceTree = "<group>";
 		};
-		6DE34A3B2125331F00DF422D /* UINShadow */ = {
+		6DE34A3B2125331F00DF422D /* UINShadowPresenter */ = {
 			isa = PBXGroup;
 			children = (
 				6DE34A542125350B00DF422D /* UINShadowViewController.storyboard */,
 				6DE34A552125350B00DF422D /* UINShadowViewController.swift */,
 			);
-			path = UINShadow;
+			path = UINShadowPresenter;
 			sourceTree = "<group>";
 		};
 		C0F9F598D541B76DE790F926 /* Frameworks */ = {

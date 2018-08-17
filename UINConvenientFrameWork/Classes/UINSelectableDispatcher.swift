@@ -1,5 +1,5 @@
 // 
-//  UINDispatcher.swift
+//  UINSelectableDispatcher.swift
 //  UINConvenientFrameWork
 //
 //  Created by yu tanaka on 2018/08/07.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-// cellの選択状態が他cellの選択状態に影響を与える場合にDispatch可能にするプロトコル
+/// Protocol to enable dispatch when cell selection state affects other cell selection state
 public protocol SelectableDispatcherProtocol {
     var uuid: String { get }
     func update(_ selected: Bool)
 }
 
-// 登録されたcellの選択状態を他cellに通知するプロトコル
+/// A protocol that notifies other cell of the selected state of the registered cell
 public class SelectableDispatcher {
     
     var targets: [SelectableDispatcherProtocol]
@@ -23,6 +23,9 @@ public class SelectableDispatcher {
         self.targets = targets
     }
     
+    /// add receiver
+    ///
+    /// - Parameter target: receiver
     public func add(target: SelectableDispatcherProtocol) {
         if let indexNum = targets.index(where: { $0.uuid == target.uuid }) {
             targets.remove(at: indexNum)
@@ -30,6 +33,9 @@ public class SelectableDispatcher {
         targets.append(target)
     }
     
+    /// remove receiver
+    ///
+    /// - Parameter target: receiver
     public func remove(target: SelectableDispatcherProtocol) {
         guard let indexNum = targets.index(where: { $0.uuid == target.uuid }) else {
             return
@@ -37,6 +43,9 @@ public class SelectableDispatcher {
         targets.remove(at: indexNum)
     }
     
+    /// receive selection
+    ///
+    /// - Parameter selected: selected instance
     public func selected(selected: SelectableDispatcherProtocol) {
         targets.forEach { $0.update($0.uuid == selected.uuid) }
     }

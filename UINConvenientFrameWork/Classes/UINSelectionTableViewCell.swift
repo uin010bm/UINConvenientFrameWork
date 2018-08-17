@@ -6,7 +6,6 @@
 //  Copyright (c) 2018年 RC-Code, Inc. All rights reserved.
 //
 
-
 import UIKit
 
 public class UINSelectionTableViewCell: UITableViewCell, SelectableDispatcherProtocol {
@@ -47,15 +46,29 @@ public class UINSelectionTableViewCell: UITableViewCell, SelectableDispatcherPro
         dispatcher?.remove(target: self)
     }
 
-    override public func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    /// setup cell contents
+    ///
+    /// - Parameters:
+    ///   - title: attributed string
+    ///   - customSelectionView: (view for selection, view for not selected)
+    ///   - margin: size of each mergin
+    ///   - selectionViewsRectValue: aspect size for selected
+    ///   - selected: set true when selected
+    ///   - dispatcher: regist the dispatcher to synchronize
     public func setup(title: NSAttributedString, customSelectionView: (selected: UIView, unselect: UIView)? = nil, margin: CGFloat? = nil, selectionViewsRectValue: CGFloat? = nil, selected: Bool, dispatcher: SelectableDispatcher? = nil) {
         
-        setup(dispatcher: dispatcher, margin: margin, selectionViewsRectValue: selectionViewsRectValue)
+        self.dispatcher = dispatcher
+        self.dispatcher?.add(target: self)
+        
+        if let margin = margin {
+            leftMargin.constant = margin
+            centerMargin.constant = margin
+            rightMargin.constant = margin
+        }
+        
+        if let selectionViewsRectValue = selectionViewsRectValue {
+            selectViewWidth.constant = selectionViewsRectValue
+        }
 
         titleLabel.attributedText = title
         
@@ -92,22 +105,6 @@ public class UINSelectionTableViewCell: UITableViewCell, SelectableDispatcherPro
         }
 
         update(selected)
-    }
-    
-    private func setup(dispatcher: SelectableDispatcher?, margin: CGFloat? = nil, selectionViewsRectValue: CGFloat? = nil) {
-        
-        self.dispatcher = dispatcher
-        self.dispatcher?.add(target: self)
-
-        if let margin = margin {
-            leftMargin.constant = margin
-            centerMargin.constant = margin
-            rightMargin.constant = margin
-        }
-        
-        if let selectionViewsRectValue = selectionViewsRectValue {
-            selectViewWidth.constant = selectionViewsRectValue
-        }
     }
     
     public func tapped() {

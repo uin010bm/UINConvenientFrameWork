@@ -6,10 +6,10 @@
 //  Copyright (c) 2018年 RC-Code, Inc. All rights reserved.
 //
 
-
 import UIKit
 import UINConvenientFrameWork
 
+/// shadow sample view controller
 class UINShadowViewController: UIViewController {
 
     @IBOutlet weak var view_a: UIView!

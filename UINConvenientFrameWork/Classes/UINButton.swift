@@ -59,96 +59,96 @@ public class UINButton: UIButton {
     
     /// Params
     
-    // button width
+    /// button width
     private var _width: CGFloat = 152
     
-    // button height
+    /// button height
     private var _height: CGFloat = 48
     
-    // button fill color
+    /// button fill color
     private var _fillColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
     
-    // button background image
+    /// button background image
     private var _backgroundImage: UIImage?
     
-    // button background image contentMode
+    /// button background image contentMode
     private var _backgroundImageContentMode: UIViewContentMode = .scaleToFill
     
-    // button line color
+    /// button line color
     private var _lineColor: UIColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.6)
     
-    // button line width
+    /// button line width
     private var _lineWidth: CGFloat?
     
-    // button radius
+    /// button radius
     private var _radius: CGFloat?
     
-    // icon size
+    /// icon size
     private var _iconSize: CGSize?
     
-    // icon charactor
+    /// icon charactor
     private var _iconText: String?
     
-    // icon font
+    /// icon font
     private var _iconFont: UIFont = UIFont.boldSystemFont(ofSize: 12)
     
-    // icon color
+    /// icon color
     private var _iconColor: UIColor = UIColor.white
     
-    // icon image
+    /// icon image
     private var _iconImage: UIImage?
     
-    // icon image content mode
+    /// icon image content mode
     private var _iconImageContentMode: UIViewContentMode = .scaleToFill
     
-    // margin between text and icon
+    /// margin between text and icon
     private var _iconMargin: CGFloat = 8
     
-    // title text
+    /// title text
     private var _text: String?
     
-    // title text with html
-    //    - caution! This params influence _text settings
+    /// title text with html
+    ///    - caution! This params influence _text settings
     private var _htmlText: String?
     
-    // title text color
+    /// title text color
     private var _textColor = UIColor.white
     
-    // title text alignment
+    /// title text alignment
     private var _textAlign = NSTextAlignment.center
     
-    // title text font
+    /// title text font
     private var _font = UIFont.boldSystemFont(ofSize: 12)
     
-    // allow multiple lines
+    /// allow multiple lines
     private var _textMultiLine = true
     
-    // button shadow alpha
+    /// button shadow alpha
     private var _dropShadow: (alpha: Float, offsetSize: CGSize, radius: CGFloat)?
     
-    // text shadow alpha
+    /// text shadow alpha
     private var _textShadow: (alpha: Float, offsetSize: CGSize, radius: CGFloat)?
     
-    // icon shadow alpha
+    /// icon shadow alpha
     private var _iconShadow: (alpha: Float, offsetSize: CGSize, radius: CGFloat)?
     
-    // selected animation type
-    //   - scale(highlightColor: UIColor, scale: Float, spring: Bool)
-    //       highlightColor: overlay highlight color
-    //       scale: enlargement and reduction percentage (1 = 100%)
-    //       spring: enable spring effect on animation
+    /// selected animation type
+    ///   - scale(highlightColor: UIColor, scale: Float, spring: Bool)
+    ///       highlightColor: overlay highlight color
+    ///       scale: enlargement and reduction percentage (1 = 100%)
+    ///       spring: enable spring effect on animation
     private var _tappedAnimType: TappedAnimType = .scale(scale: 0.97, spring: false)
     
-    // hightlight color when tapped
+    /// hightlight color when tapped
     private var _highlightColor: UIColor?
     
-    // hightlight color when tapped
+    /// hightlight color when tapped
     private var _highlightHierarchy: HighlightHierarchy = .front
     
-    // button touchup handler
+    /// button touchup handler
     private var _touchUpHandler: ((UINButton) -> Void)?
 
-    // default position
+    /// default position
     private var iconOriginPosition: CGPoint?
     private var textOriginPosition: CGPoint?
     
@@ -296,6 +296,13 @@ public class UINButton: UIButton {
         return self
     }
     
+    
+    /// toggle interaction enabled
+    ///
+    /// - Parameters:
+    ///   - bool: interaction enabled
+    ///   - animated: with animation
+    /// - Returns: self
     @discardableResult public func isEnabled(_ bool: Bool, animated: Bool = false) -> UINButton {
         isUserInteractionEnabled = bool
         if animated {
@@ -308,14 +315,18 @@ public class UINButton: UIButton {
         return self
     }
     
-    /// draw button view
-    /// isVerticality -> icon and text row alignment
+    
+    /// drawing view with setting params
+    ///
+    /// - Parameters:
+    ///   - verticality: display icon above text
+    ///   - iconHorizontal: icon alignment
+    /// - Returns: self
     public func draw(verticality: Bool = false, iconHorizontal: Bool = true) -> UINButton {
         
         // setup rect
         content.frame = CGRect(x: (frame.width - _width) / 2, y: (frame.height - _height) / 2, width: _width, height: _height)
         brinkView.frame = content.frame
-        
         
         // remove
         content.layer.removeFromSuperlayer()
@@ -489,7 +500,10 @@ public class UINButton: UIButton {
         return self
     }
     
+    
     /// show button with alpha animation
+    ///
+    /// - Parameter animated: with animation
     public func show(animated: Bool = true) {
         if animated {
             alpha = 0
@@ -502,7 +516,10 @@ public class UINButton: UIButton {
         }
     }
     
+
     /// hide button with alpha animation
+    ///
+    /// - Parameter animated: with animation
     public func hide(animated: Bool = true) {
         if animated {
             alpha = 1
@@ -515,7 +532,7 @@ public class UINButton: UIButton {
         }
     }
     
-    /// animation flow when touch down
+
     private func onTouchDown() {
         
         // animate highlight color
@@ -554,7 +571,7 @@ public class UINButton: UIButton {
         }
     }
     
-    /// animation flow when touch up
+    
     private func onTouchUp() {
         
         // animate highlight color
@@ -592,18 +609,18 @@ public class UINButton: UIButton {
         }
     }
     
-    /// touch up inside handler
+    
     private func onTouchUpInside() {
         _touchUpHandler?(self)
     }
     
-    /// catch ui touch began event
+    
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         onTouchDown()
     }
     
-    /// catch ui touch end event
+    
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         onTouchUp()
@@ -617,7 +634,7 @@ public class UINButton: UIButton {
         }
     }
     
-    /// generate clear image for background
+    
     private func generateClearImage(_ size: CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
         guard let context = UIGraphicsGetCurrentContext() else {
@@ -643,7 +660,6 @@ public class UINButton: UIButton {
 /// Needs Extensions
 fileprivate extension UIView {
     
-    /// Remove all subViews
     fileprivate func removeChildren() {
         for child in subviews {
             child.removeFromSuperview()

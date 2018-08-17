@@ -6,10 +6,10 @@
 //  Copyright (c) 2018年 RC-Code, Inc. All rights reserved.
 //
 
-
 import UIKit
 import UINConvenientFrameWork
 
+/// selectable dispatcher sample
 class UINMultipleSelectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
@@ -114,6 +114,7 @@ class UINMultipleSelectionViewController: UIViewController, UITableViewDelegate,
 }
 
 
+/// data manager
 class UINMultipleSelectionManager {
     
     enum SelectionType {
