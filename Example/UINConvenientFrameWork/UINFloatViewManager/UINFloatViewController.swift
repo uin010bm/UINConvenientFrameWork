@@ -18,6 +18,11 @@ class UINFloatViewController: UIViewController {
         floatView.backgroundColor = UIColor.black
         floatView.alpha = 0.4
         floatView.layer.cornerRadius = 4
+        let label = UILabel(frame: floatView.frame)
+        label.text = "Drag me!!"
+        label.textAlignment = .center
+        label.textColor = .white
+        floatView.addSubview(label)
         UINFloatViewManager.shared.setup(view: floatView)
     }
     

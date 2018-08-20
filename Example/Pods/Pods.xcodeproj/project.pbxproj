@@ -16,7 +16,6 @@
 		671C4A53A2C46F4C7B08D31BF1D5E8F9 /* Pods-UINConvenientFrameWork_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E2E0FFED7058D320A1061BAB622437 /* Pods-UINConvenientFrameWork_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AA755423BF81280F074ABF3C5CDD855 /* UINProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3162E2DE15C62E34BF391A0A58E5BEAF /* UINProgressView.swift */; };
 		89482041516296ED85686031943DEA24 /* UINConvenientFrameWork-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD13DB80DFDFD37750B1F2FB76DBD544 /* UINConvenientFrameWork-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		944BF3627C64F30A389ECBF29F1E5B79 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF6F88D2CDFD2E91635A9C1649085F /* ReplaceMe.swift */; };
 		9E18B700AE6C5ADF74345E74F0819395 /* UINFloatViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A770350B7086E65B2B170B79630ED /* UINFloatViewManager.swift */; };
 		B2595F1067DE12D7D2D0D36A5C81BE94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		BAB539FD9E93D953E962A0C493056040 /* UINShadowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63005E9F6F12EC90A9EC2AF614F8C1 /* UINShadowPresenter.swift */; };
@@ -76,7 +75,6 @@
 		A266AF3F7B7655925B9267684DB46C03 /* Pods-UINConvenientFrameWork_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UINConvenientFrameWork_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C0E2E0FFED7058D320A1061BAB622437 /* Pods-UINConvenientFrameWork_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UINConvenientFrameWork_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C2DD101F5BFCDCC13275C34D02AF2884 /* UINConvenientFrameWork.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UINConvenientFrameWork.xcconfig; sourceTree = "<group>"; };
-		C6BF6F88D2CDFD2E91635A9C1649085F /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = UINConvenientFrameWork/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		CD2D7BF5E3B0D1F5CDEB686681067818 /* Pods-UINConvenientFrameWork_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UINConvenientFrameWork_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D10CFCE9AA4AFD2F2E125A04D14AD47B /* UINSelectableDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UINSelectableDispatcher.swift; path = UINConvenientFrameWork/Classes/UINSelectableDispatcher.swift; sourceTree = "<group>"; };
 		D990F8BD57023C873AA554DCB624AE8C /* UINSelectionTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = UINSelectionTableViewCell.xib; path = UINConvenientFrameWork/Classes/UINSelectionTableViewCell.xib; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 		0D7A666EE3B6DDF185F7D14004D488B0 /* UINConvenientFrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				C6BF6F88D2CDFD2E91635A9C1649085F /* ReplaceMe.swift */,
 				22A2E29F267F56CA86C27DB5A8AAA271 /* UINButton.swift */,
 				E55A770350B7086E65B2B170B79630ED /* UINFloatViewManager.swift */,
 				F954791802A79BA561FF748BD43F3142 /* UINGradationPresenter.swift */,
@@ -386,7 +383,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				944BF3627C64F30A389ECBF29F1E5B79 /* ReplaceMe.swift in Sources */,
 				63694B799C45C60DDEB91EF6586C0759 /* UINButton.swift in Sources */,
 				FDCB19DDEDAD55E1F67E556BCD732234 /* UINConvenientFrameWork-dummy.m in Sources */,
 				9E18B700AE6C5ADF74345E74F0819395 /* UINFloatViewManager.swift in Sources */,
