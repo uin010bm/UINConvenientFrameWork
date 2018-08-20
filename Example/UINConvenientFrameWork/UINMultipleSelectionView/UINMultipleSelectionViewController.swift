@@ -43,9 +43,10 @@ class UINMultipleSelectionViewController: UIViewController, UITableViewDelegate,
             .tappedAnimType(type: .scale(scale: 0.97, spring: false))
             .highlightColor(color: .white)
             .touchUpHandler({ [weak self] button in
-                let vc = UIAlertController(title: "Done!", message: "Thank you so much.", preferredStyle: .alert)
+                guard let me = self else { return }
+                let vc = UIAlertController(title: "Done!", message: "selected \(me.manager.selectedNumStr)", preferredStyle: .alert)
                 vc.addAction(UIAlertAction(title: "close", style: .cancel, handler: nil))
-                self?.present(vc, animated: true, completion: nil)
+                me.present(vc, animated: true, completion: nil)
             })
             .isEnabled(false)
             .draw()
@@ -117,6 +118,7 @@ class UINMultipleSelectionViewController: UIViewController, UITableViewDelegate,
 /// data manager
 class UINMultipleSelectionManager {
     
+    /// selection view type
     enum SelectionType {
         case `default`, image, label
         
@@ -142,6 +144,7 @@ class UINMultipleSelectionManager {
         }
     }
     
+    /// selection data class
     class Asset {
         let title: NSAttributedString
         let type: SelectionType
@@ -155,12 +158,14 @@ class UINMultipleSelectionManager {
         }
     }
     
+    /// section data
     struct Section {
         let title: String
         let values: [Asset]
         let dispatcher = SelectableDispatcher()
     }
     
+    /// questions list model
     let list: [Section] = [
         Section(title: "From the choices below, choose the celebrity you like best.", values: [
             Asset(title: NSAttributedString(string: "Warren Edward Buffett"), type: .default, selected: false),
@@ -183,7 +188,27 @@ class UINMultipleSelectionManager {
             Asset(title: NSAttributedString(string: "Give money"), type: .label, selected: false)
             ])
     ]
+    
+    /// return selected numbers converted to string array
+    var selectedNumStr: String {
+        var listsStr = ""
+        list.forEach { section in
+            section.values.enumerated().forEach { (index, value) in
+                if value.selected {
+                    if listsStr.isEmpty {
+                        listsStr.append("[")
+                    } else {
+                        listsStr.append(", ")
+                    }
+                    listsStr.append("\(index)")
+                }
+            }
+        }
+        listsStr.append("]")
+        return listsStr
+    }
 
+    /// eturn bool to display decision switch
     var checkDecideEnabled: Bool {
         
         var enableSections: [Bool] = []
@@ -201,6 +226,7 @@ class UINMultipleSelectionManager {
         return enableSections.count == list.count
     }
     
+    /// upadte selected value
     func update(selectedIndex: IndexPath, cell: SelectableDispatcherProtocol) {
         list[selectedIndex.section].dispatcher.selected(selected: cell)
         list[selectedIndex.section].values.enumerated().forEach { (arg) in
