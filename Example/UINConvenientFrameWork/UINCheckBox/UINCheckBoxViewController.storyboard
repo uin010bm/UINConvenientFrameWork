@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iK6-bv-q4T">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Check Box View Controller-->
+        <scene sceneID="Ysz-gJ-aRS">
+            <objects>
+                <viewController id="iK6-bv-q4T" customClass="UINCheckBoxViewController" customModule="UINConvenientFrameWork_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XM8-V2-VKD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZS-V5-bUm" customClass="UINCheckBox" customModule="UINConvenientFrameWork">
+                                <rect key="frame" x="167.5" y="40" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="05P-vk-tk1"/>
+                                    <constraint firstAttribute="width" constant="40" id="mwt-QB-hbh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBh-9Z-Sk4" customClass="UINCheckBox" customModule="UINConvenientFrameWork">
+                                <rect key="frame" x="97.5" y="43.5" width="40" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SBh-9Z-Sk4" secondAttribute="height" multiplier="6:5" id="vhV-Me-yw3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zs6-aN-w74" customClass="UINCheckBox" customModule="UINConvenientFrameWork">
+                                <rect key="frame" x="237.5" y="40" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mar-Bq-2VO"/>
+                                    <constraint firstAttribute="width" constant="40" id="mzz-sW-hfE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SBh-9Z-Sk4" firstAttribute="centerY" secondItem="mZS-V5-bUm" secondAttribute="centerY" id="2s9-UR-gZo"/>
+                            <constraint firstItem="zs6-aN-w74" firstAttribute="centerY" secondItem="mZS-V5-bUm" secondAttribute="centerY" id="3fH-gg-dkE"/>
+                            <constraint firstItem="zs6-aN-w74" firstAttribute="leading" secondItem="mZS-V5-bUm" secondAttribute="trailing" constant="30" id="Fau-Pq-GT0"/>
+                            <constraint firstItem="mZS-V5-bUm" firstAttribute="leading" secondItem="SBh-9Z-Sk4" secondAttribute="trailing" constant="30" id="NAO-Z9-ZxM"/>
+                            <constraint firstItem="mZS-V5-bUm" firstAttribute="top" secondItem="36I-8g-1pi" secondAttribute="top" constant="20" id="kLo-11-zdl"/>
+                            <constraint firstItem="mZS-V5-bUm" firstAttribute="centerX" secondItem="XM8-V2-VKD" secondAttribute="centerX" id="rxX-V8-7zM"/>
+                            <constraint firstItem="SBh-9Z-Sk4" firstAttribute="width" secondItem="mZS-V5-bUm" secondAttribute="width" id="u19-Db-C36"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="36I-8g-1pi"/>
+                    </view>
+                    <connections>
+                        <outlet property="check_box_1" destination="mZS-V5-bUm" id="9P8-ld-VAa"/>
+                        <outlet property="check_box_2" destination="SBh-9Z-Sk4" id="3Ap-fe-urX"/>
+                        <outlet property="check_box_3" destination="zs6-aN-w74" id="KSI-6r-OVe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzn-yc-1gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="171.36431784107947"/>
+        </scene>
+    </scenes>
+</document>

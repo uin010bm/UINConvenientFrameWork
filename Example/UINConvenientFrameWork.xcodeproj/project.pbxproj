@@ -14,6 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		6D00169E212BF228005C17F0 /* UINCheckBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00169D212BF228005C17F0 /* UINCheckBoxViewController.swift */; };
+		6D0016A0212BF316005C17F0 /* UINCheckBoxViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D00169F212BF316005C17F0 /* UINCheckBoxViewController.storyboard */; };
 		6D01EE56212542E900EF086C /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D01EE55212542E900EF086C /* ListTableViewController.swift */; };
 		6D01EE592125445800EF086C /* Genericons-Neue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D01EE58212543DB00EF086C /* Genericons-Neue.ttf */; };
 		6DE34A42212534DD00DF422D /* UINButtonViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE34A40212534DD00DF422D /* UINButtonViewController.storyboard */; };
@@ -56,6 +58,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		62512E0D958BED40173000D1 /* UINConvenientFrameWork.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UINConvenientFrameWork.podspec; path = ../UINConvenientFrameWork.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6D00169D212BF228005C17F0 /* UINCheckBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINCheckBoxViewController.swift; sourceTree = "<group>"; };
+		6D00169F212BF316005C17F0 /* UINCheckBoxViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UINCheckBoxViewController.storyboard; sourceTree = "<group>"; };
 		6D01EE55212542E900EF086C /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListTableViewController.swift; path = "../../../名称未設定フォルダ/ConvenientSamples/ListTableViewController.swift"; sourceTree = "<group>"; };
 		6D01EE58212543DB00EF086C /* Genericons-Neue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Genericons-Neue.ttf"; sourceTree = "<group>"; };
 		6DE34A40212534DD00DF422D /* UINButtonViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UINButtonViewController.storyboard; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				6DE34A2C212532D600DF422D /* UINGradation */,
 				6DE34A27212532B800DF422D /* UINFloatViewManager */,
 				6DE34A222125328A00DF422D /* UINButton */,
+				6D333176212A8BBA00DEA2BB /* UINCheckBox */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -190,6 +195,15 @@
 				6D01EE58212543DB00EF086C /* Genericons-Neue.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6D333176212A8BBA00DEA2BB /* UINCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				6D00169F212BF316005C17F0 /* UINCheckBoxViewController.storyboard */,
+				6D00169D212BF228005C17F0 /* UINCheckBoxViewController.swift */,
+			);
+			path = UINCheckBox;
 			sourceTree = "<group>";
 		};
 		6DE34A222125328A00DF422D /* UINButton */ = {
@@ -350,6 +364,7 @@
 				6DE34A4B212534F000DF422D /* UINGradationViewController.storyboard in Resources */,
 				6DE34A522125350200DF422D /* UINProgressViewController.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				6D0016A0212BF316005C17F0 /* UINCheckBoxViewController.storyboard in Resources */,
 				6DE34A4E212534FA00DF422D /* UINMultipleSelectionViewController.storyboard in Resources */,
 				6DE34A47212534E700DF422D /* UINFloatViewController.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -427,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D00169E212BF228005C17F0 /* UINCheckBoxViewController.swift in Sources */,
 				6DE34A572125350B00DF422D /* UINShadowViewController.swift in Sources */,
 				6DE34A532125350200DF422D /* UINProgressViewController.swift in Sources */,
 				6DE34A4F212534FA00DF422D /* UINMultipleSelectionViewController.swift in Sources */,
