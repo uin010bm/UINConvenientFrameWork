@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Push Emulator View Controller-->
+        <!--User Notification Emulator View Controller-->
         <scene sceneID="rci-gT-8W6">
             <objects>
-                <viewController id="36W-Rt-OqB" customClass="UINPushEmulatorViewController" customModule="UINConvenientFrameWork_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="36W-Rt-OqB" customClass="UINUserNotificationEmulatorViewController" customModule="UINConvenientFrameWork_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yNy-SS-zrJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
