@@ -8,6 +8,11 @@
 
 import UIKit
 
+/// protocol for enabled hit test
+public protocol UINFloatingSubviewProtocol {
+    var hitEnabled: Bool { get }
+}
+
 /// floating view manager
 /// setup custom window and create floating view controller
 public class UINFloatViewManager: NSObject {
@@ -64,27 +69,29 @@ private class FloatViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setup()
+        deploy()
     }
 
     /// setup inner view
     ///
     /// - Parameter view: customize view
-    fileprivate func setupView(view: UIView) {
+    @discardableResult fileprivate func setupView(view: UIView) -> Self {
         
         // wrapperView
         wrapperView = view
         
-        guard let wrapperView = wrapperView else { return }
+        guard let wrapperView = wrapperView else { return self }
 
         // event setting
         panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(FloatViewController.handlePan(_:)))
-        guard let panRecognizer = panRecognizer else { return }
+        guard let panRecognizer = panRecognizer else { return self }
         wrapperView.addGestureRecognizer(panRecognizer)
+        
+        return self
     }
     
     /// add subview
-    public func setup() {
+    public func deploy() {
         guard let wrapperView = wrapperView else { return }
         wrapperView.removeFromSuperview()
         view.addSubview(wrapperView)
@@ -110,7 +117,7 @@ private class FloatViewController: UIViewController {
         }
     }
     
-    /// validate hit test
+    /// check hit point contained in view
     ///
     /// - Parameters:
     ///   - window: wrapper window
@@ -120,10 +127,28 @@ private class FloatViewController: UIViewController {
     public func hitTest(_ window: UIWindow, point: CGPoint, with event: UIEvent?) -> UIView? {
         guard let wrapperView = wrapperView else { return nil }
         
+        // checking subview
+        var hitSubview: UIView?
+        wrapperView.subviews.forEach { subview in
+            guard let floatingSubview = subview as? UINFloatingSubviewProtocol else { return }
+            if floatingSubview.hitEnabled {
+                let subViewFrame = subview.convert(subview.bounds, to: window)
+                if subViewFrame.contains(point) {
+                    hitSubview = subview
+                }
+            }
+        }
+        
+        if let hitSubview = hitSubview {
+            return hitSubview
+        }
+        
+        // cheching wrapper
         let wrapperFrame = wrapperView.convert(wrapperView.bounds, to: window)
         if wrapperFrame.contains(point) {
             return wrapperView
         }
+        
         return nil
     }
 }
