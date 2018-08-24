@@ -8,6 +8,7 @@
 
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        UNUserNotificationCenter.current().delegate = self
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         if let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController() {
             let navigationVc = UINavigationController(rootViewController: vc)
             self.window?.rootViewController = navigationVc
+        }
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.badge, .sound, .alert]) { granted, error in
+            DispatchQueue.main.async {
+                if error == nil && granted {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
         }
 
         return true
@@ -46,7 +58,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        if response.notification.request.content.categoryIdentifier == "" {
+        }
+    }
 }
 

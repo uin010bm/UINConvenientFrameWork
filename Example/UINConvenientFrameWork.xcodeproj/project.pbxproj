@@ -18,6 +18,8 @@
 		6D0016A0212BF316005C17F0 /* UINCheckBoxViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D00169F212BF316005C17F0 /* UINCheckBoxViewController.storyboard */; };
 		6D01EE56212542E900EF086C /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D01EE55212542E900EF086C /* ListTableViewController.swift */; };
 		6D01EE592125445800EF086C /* Genericons-Neue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D01EE58212543DB00EF086C /* Genericons-Neue.ttf */; };
+		6D430A13212FC42E00ECCA26 /* UINUserNotificationEmulatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D430A12212FC42E00ECCA26 /* UINUserNotificationEmulatorViewController.swift */; };
+		6D430A15212FC4B800ECCA26 /* UINUserNotificationEmulatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D430A14212FC4B800ECCA26 /* UINUserNotificationEmulatorViewController.storyboard */; };
 		6DE34A42212534DD00DF422D /* UINButtonViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE34A40212534DD00DF422D /* UINButtonViewController.storyboard */; };
 		6DE34A43212534DD00DF422D /* UINButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE34A41212534DD00DF422D /* UINButtonViewController.swift */; };
 		6DE34A46212534E700DF422D /* UINFloatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE34A44212534E700DF422D /* UINFloatViewController.swift */; };
@@ -62,6 +64,9 @@
 		6D00169F212BF316005C17F0 /* UINCheckBoxViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UINCheckBoxViewController.storyboard; sourceTree = "<group>"; };
 		6D01EE55212542E900EF086C /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListTableViewController.swift; path = "../../../名称未設定フォルダ/ConvenientSamples/ListTableViewController.swift"; sourceTree = "<group>"; };
 		6D01EE58212543DB00EF086C /* Genericons-Neue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Genericons-Neue.ttf"; sourceTree = "<group>"; };
+		6D430A12212FC42E00ECCA26 /* UINUserNotificationEmulatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINUserNotificationEmulatorViewController.swift; sourceTree = "<group>"; };
+		6D430A14212FC4B800ECCA26 /* UINUserNotificationEmulatorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UINUserNotificationEmulatorViewController.storyboard; sourceTree = "<group>"; };
+		6D430A17212FD18900ECCA26 /* UINConvenientFrameWork_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UINConvenientFrameWork_Example.entitlements; sourceTree = "<group>"; };
 		6DE34A40212534DD00DF422D /* UINButtonViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UINButtonViewController.storyboard; sourceTree = "<group>"; };
 		6DE34A41212534DD00DF422D /* UINButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINButtonViewController.swift; sourceTree = "<group>"; };
 		6DE34A44212534E700DF422D /* UINFloatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINFloatViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +119,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				6D430A17212FD18900ECCA26 /* UINConvenientFrameWork_Example.entitlements */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for UINConvenientFrameWork */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -143,6 +149,7 @@
 				6DE34A27212532B800DF422D /* UINFloatViewManager */,
 				6DE34A222125328A00DF422D /* UINButton */,
 				6D333176212A8BBA00DEA2BB /* UINCheckBox */,
+				6D430A11212FC3F800ECCA26 /* UINUserNotificationEmulator */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -204,6 +211,15 @@
 				6D00169D212BF228005C17F0 /* UINCheckBoxViewController.swift */,
 			);
 			path = UINCheckBox;
+			sourceTree = "<group>";
+		};
+		6D430A11212FC3F800ECCA26 /* UINUserNotificationEmulator */ = {
+			isa = PBXGroup;
+			children = (
+				6D430A14212FC4B800ECCA26 /* UINUserNotificationEmulatorViewController.storyboard */,
+				6D430A12212FC42E00ECCA26 /* UINUserNotificationEmulatorViewController.swift */,
+			);
+			path = UINUserNotificationEmulator;
 			sourceTree = "<group>";
 		};
 		6DE34A222125328A00DF422D /* UINButton */ = {
@@ -325,6 +341,14 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = V7TFL76DGP;
 						LastSwiftMigration = 0900;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -364,6 +388,7 @@
 				6DE34A4B212534F000DF422D /* UINGradationViewController.storyboard in Resources */,
 				6DE34A522125350200DF422D /* UINProgressViewController.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				6D430A15212FC4B800ECCA26 /* UINUserNotificationEmulatorViewController.storyboard in Resources */,
 				6D0016A0212BF316005C17F0 /* UINCheckBoxViewController.storyboard in Resources */,
 				6DE34A4E212534FA00DF422D /* UINMultipleSelectionViewController.storyboard in Resources */,
 				6DE34A47212534E700DF422D /* UINFloatViewController.storyboard in Resources */,
@@ -442,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D430A13212FC42E00ECCA26 /* UINUserNotificationEmulatorViewController.swift in Sources */,
 				6D00169E212BF228005C17F0 /* UINCheckBoxViewController.swift in Sources */,
 				6DE34A572125350B00DF422D /* UINShadowViewController.swift in Sources */,
 				6DE34A532125350200DF422D /* UINProgressViewController.swift in Sources */,
@@ -537,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -583,7 +609,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
