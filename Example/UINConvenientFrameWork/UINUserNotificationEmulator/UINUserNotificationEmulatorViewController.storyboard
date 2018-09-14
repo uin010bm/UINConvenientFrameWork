@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="36W-Rt-OqB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="36W-Rt-OqB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,11 +58,44 @@
                                 <rect key="frame" x="172.5" y="576" width="30" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S0J-iq-zXN">
+                                <rect key="frame" x="168.5" y="413" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="sVY-CM-Yfi"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbP-sU-MuE">
+                                <rect key="frame" x="168.5" y="473" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="4bX-cx-eNO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Badge Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbQ-Jy-FGR">
+                                <rect key="frame" x="20" y="413" width="128.5" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay Sec:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnf-dE-P6l">
+                                <rect key="frame" x="20" y="473" width="100" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="noB-0Q-IxP" firstAttribute="trailing" secondItem="jYS-7U-Cgd" secondAttribute="trailing" constant="20" id="0wd-L4-jAk"/>
+                            <constraint firstItem="cbP-sU-MuE" firstAttribute="top" secondItem="S0J-iq-zXN" secondAttribute="bottom" constant="30" id="3jx-42-AHS"/>
+                            <constraint firstItem="Bnf-dE-P6l" firstAttribute="top" secondItem="cbP-sU-MuE" secondAttribute="top" id="7OM-PB-zsR"/>
                             <constraint firstItem="noB-0Q-IxP" firstAttribute="trailing" secondItem="RGX-PI-LR4" secondAttribute="trailing" constant="20" id="Cwl-4O-fDa"/>
+                            <constraint firstItem="S0J-iq-zXN" firstAttribute="top" secondItem="jYS-7U-Cgd" secondAttribute="bottom" constant="30" id="ER4-7X-bbI"/>
                             <constraint firstItem="Jbz-Kn-QqO" firstAttribute="centerX" secondItem="yNy-SS-zrJ" secondAttribute="centerX" id="Etp-4l-a9x"/>
                             <constraint firstItem="BNN-yS-orG" firstAttribute="top" secondItem="3hf-qx-VuD" secondAttribute="bottom" constant="30" id="Fob-T3-64e"/>
                             <constraint firstItem="BNN-yS-orG" firstAttribute="leading" secondItem="noB-0Q-IxP" secondAttribute="leading" constant="20" id="GS4-Fu-RHS"/>
@@ -72,14 +105,21 @@
                             <constraint firstItem="Odx-F2-lCb" firstAttribute="top" secondItem="jYS-7U-Cgd" secondAttribute="top" id="S0g-Wp-10B"/>
                             <constraint firstItem="Odx-F2-lCb" firstAttribute="leading" secondItem="noB-0Q-IxP" secondAttribute="leading" constant="20" id="Sjn-wK-HhX"/>
                             <constraint firstItem="jYS-7U-Cgd" firstAttribute="top" secondItem="RGX-PI-LR4" secondAttribute="bottom" constant="30" id="aCU-qp-Z4W"/>
+                            <constraint firstItem="S0J-iq-zXN" firstAttribute="leading" secondItem="gbQ-Jy-FGR" secondAttribute="trailing" constant="20" id="dgW-JY-ruI"/>
+                            <constraint firstItem="gbQ-Jy-FGR" firstAttribute="top" secondItem="S0J-iq-zXN" secondAttribute="top" id="gOd-Cc-hIs"/>
                             <constraint firstItem="RGX-PI-LR4" firstAttribute="leading" secondItem="BNN-yS-orG" secondAttribute="trailing" constant="20" id="gSp-SI-Y9w"/>
                             <constraint firstItem="3hf-qx-VuD" firstAttribute="centerX" secondItem="yNy-SS-zrJ" secondAttribute="centerX" id="ikw-CB-FmS"/>
+                            <constraint firstItem="gbQ-Jy-FGR" firstAttribute="leading" secondItem="noB-0Q-IxP" secondAttribute="leading" constant="20" id="ilU-iH-0Jf"/>
                             <constraint firstItem="jYS-7U-Cgd" firstAttribute="width" secondItem="RGX-PI-LR4" secondAttribute="width" id="kea-AP-gIZ"/>
+                            <constraint firstItem="Bnf-dE-P6l" firstAttribute="leading" secondItem="noB-0Q-IxP" secondAttribute="leading" constant="20" id="kzR-Cs-1E5"/>
+                            <constraint firstItem="cbP-sU-MuE" firstAttribute="leading" secondItem="S0J-iq-zXN" secondAttribute="leading" id="pKw-co-Hjq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="noB-0Q-IxP"/>
                     </view>
                     <connections>
+                        <outlet property="badgeCount_textField" destination="S0J-iq-zXN" id="wE0-gG-9jW"/>
                         <outlet property="body_textField" destination="jYS-7U-Cgd" id="r3E-PO-rDU"/>
+                        <outlet property="delaySec_textField" destination="cbP-sU-MuE" id="srr-hq-Hhf"/>
                         <outlet property="sendButton" destination="Jbz-Kn-QqO" id="gt9-Xa-vUL"/>
                         <outlet property="title_textField" destination="RGX-PI-LR4" id="uFy-aC-S2x"/>
                     </connections>

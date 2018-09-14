@@ -28,6 +28,22 @@ class UINUserNotificationEmulatorViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var badgeCount_textField: UITextField! {
+        didSet {
+            badgeCount_textField.layer.borderWidth = 1
+            badgeCount_textField.layer.borderColor = UIColor.lightGray.cgColor
+            badgeCount_textField.layer.cornerRadius = 4
+        }
+    }
+    
+    @IBOutlet weak var delaySec_textField: UITextField! {
+        didSet {
+            delaySec_textField.layer.borderWidth = 1
+            delaySec_textField.layer.borderColor = UIColor.lightGray.cgColor
+            delaySec_textField.layer.cornerRadius = 4
+        }
+    }
+    
     @IBOutlet weak var sendButton: UINButton!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,7 +63,7 @@ class UINUserNotificationEmulatorViewController: UIViewController {
             .highlightColor(color: .white)
             .touchUpHandler({ [weak self] button in
                 guard let me = self else { return }
-                UINUserNotificationEmulator.sendSampleNotification(title: me.title_textField.text, body: me.body_textField.text, badge: 3, timing: 2)
+                UINUserNotificationEmulator.sendSampleNotification(title: me.title_textField.text, body: me.body_textField.text, badge: Int(me.badgeCount_textField.text ?? "0") ?? 0, timing: TimeInterval(Int(me.delaySec_textField.text ?? "0") ?? 1))
             })
             .draw()
             .show()
