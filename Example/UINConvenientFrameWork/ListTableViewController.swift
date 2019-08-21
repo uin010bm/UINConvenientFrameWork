@@ -23,7 +23,8 @@ class ListTableViewController: UITableViewController {
         Asset(title: "UINProgressView", class: "UINProgressViewController"),
         Asset(title: "UINFloatView", class: "UINFloatViewController"),
         Asset(title: "UINMultipleSelectionView", class: "UINMultipleSelectionViewController"),
-        Asset(title: "UINUserNotificationEmulator", class: "UINUserNotificationEmulatorViewController")
+        Asset(title: "UINUserNotificationEmulator", class: "UINUserNotificationEmulatorViewController"),
+        Asset(title: "UINBalloon", class: "UINBalloonViewController")
     ]
 
     override func viewDidLoad() {

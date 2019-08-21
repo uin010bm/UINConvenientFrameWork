@@ -11,6 +11,7 @@ import UIKit
 import UserNotifications
 
 /// user notification center presenter
+@available(iOS 10.0, *)
 public class UINUserNotificationEmulator {
     
     /// fire user notification

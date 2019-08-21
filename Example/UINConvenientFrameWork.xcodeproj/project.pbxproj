@@ -22,6 +22,8 @@
 		6D430A15212FC4B800ECCA26 /* UINUserNotificationEmulatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D430A14212FC4B800ECCA26 /* UINUserNotificationEmulatorViewController.storyboard */; };
 		6D4943AA212FFE690085BADD /* UINBalloonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4943A9212FFE690085BADD /* UINBalloonViewController.swift */; };
 		6D4943AC212FFEBF0085BADD /* UINBalloonViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4943AB212FFEBF0085BADD /* UINBalloonViewController.storyboard */; };
+		6DB7710E217EF9D4000ABF0E /* UINViewAnimatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DB7710D217EF9D4000ABF0E /* UINViewAnimatorViewController.storyboard */; };
+		6DB77110217EF9EE000ABF0E /* UINViewAnimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB7710F217EF9EE000ABF0E /* UINViewAnimatorViewController.swift */; };
 		6DE34A42212534DD00DF422D /* UINButtonViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE34A40212534DD00DF422D /* UINButtonViewController.storyboard */; };
 		6DE34A43212534DD00DF422D /* UINButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE34A41212534DD00DF422D /* UINButtonViewController.swift */; };
 		6DE34A46212534E700DF422D /* UINFloatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE34A44212534E700DF422D /* UINFloatViewController.swift */; };
@@ -71,6 +73,8 @@
 		6D430A17212FD18900ECCA26 /* UINConvenientFrameWork_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UINConvenientFrameWork_Example.entitlements; sourceTree = "<group>"; };
 		6D4943A9212FFE690085BADD /* UINBalloonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINBalloonViewController.swift; sourceTree = "<group>"; };
 		6D4943AB212FFEBF0085BADD /* UINBalloonViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UINBalloonViewController.storyboard; sourceTree = "<group>"; };
+		6DB7710D217EF9D4000ABF0E /* UINViewAnimatorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UINViewAnimatorViewController.storyboard; sourceTree = "<group>"; };
+		6DB7710F217EF9EE000ABF0E /* UINViewAnimatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINViewAnimatorViewController.swift; sourceTree = "<group>"; };
 		6DE34A40212534DD00DF422D /* UINButtonViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UINButtonViewController.storyboard; sourceTree = "<group>"; };
 		6DE34A41212534DD00DF422D /* UINButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINButtonViewController.swift; sourceTree = "<group>"; };
 		6DE34A44212534E700DF422D /* UINFloatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINFloatViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 				6D333176212A8BBA00DEA2BB /* UINCheckBox */,
 				6D430A11212FC3F800ECCA26 /* UINUserNotificationEmulator */,
 				6D4943A8212FFE400085BADD /* UINBalloon */,
+				6DB7710A217EF92F000ABF0E /* UINViewAnimator */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -234,6 +239,15 @@
 				6D4943A9212FFE690085BADD /* UINBalloonViewController.swift */,
 			);
 			path = UINBalloon;
+			sourceTree = "<group>";
+		};
+		6DB7710A217EF92F000ABF0E /* UINViewAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				6DB7710D217EF9D4000ABF0E /* UINViewAnimatorViewController.storyboard */,
+				6DB7710F217EF9EE000ABF0E /* UINViewAnimatorViewController.swift */,
+			);
+			path = UINViewAnimator;
 			sourceTree = "<group>";
 		};
 		6DE34A222125328A00DF422D /* UINButton */ = {
@@ -403,6 +417,7 @@
 				6DE34A522125350200DF422D /* UINProgressViewController.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				6D430A15212FC4B800ECCA26 /* UINUserNotificationEmulatorViewController.storyboard in Resources */,
+				6DB7710E217EF9D4000ABF0E /* UINViewAnimatorViewController.storyboard in Resources */,
 				6D0016A0212BF316005C17F0 /* UINCheckBoxViewController.storyboard in Resources */,
 				6DE34A4E212534FA00DF422D /* UINMultipleSelectionViewController.storyboard in Resources */,
 				6DE34A47212534E700DF422D /* UINFloatViewController.storyboard in Resources */,
@@ -489,6 +504,7 @@
 				6DE34A532125350200DF422D /* UINProgressViewController.swift in Sources */,
 				6DE34A4F212534FA00DF422D /* UINMultipleSelectionViewController.swift in Sources */,
 				6D01EE56212542E900EF086C /* ListTableViewController.swift in Sources */,
+				6DB77110217EF9EE000ABF0E /* UINViewAnimatorViewController.swift in Sources */,
 				6DE34A46212534E700DF422D /* UINFloatViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				6DE34A4A212534F000DF422D /* UINGradationViewController.swift in Sources */,
